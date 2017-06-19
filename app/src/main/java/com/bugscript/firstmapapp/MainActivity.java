@@ -17,6 +17,30 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     GoogleMap m_map;
     boolean mapReady=false;
 
+
+    static final CameraPosition delhi=CameraPosition.builder()
+            .target(new LatLng(28.7041,77.1025))
+            .zoom(21)
+            .bearing(0)
+            .tilt(45)
+            .build();
+
+    static final CameraPosition boston=CameraPosition.builder()
+            .target(new LatLng(42.3601,71.0589))
+            .zoom(17)
+            .bearing(0)
+            .tilt(45)
+            .build();
+
+    static final CameraPosition paris=CameraPosition.builder()
+            .target(new LatLng(48.8566,2.3522))
+            .zoom(17)
+            .bearing(0)
+            .tilt(45)
+            .build();
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +51,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View view) {
                 if(mapReady){
-                    m_map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                    m_map.animateCamera(CameraUpdateFactory.newCameraPosition(delhi),1000,null);
+
                 }
             }
         });
@@ -37,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View view) {
                 if(mapReady){
-                    m_map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                    m_map.animateCamera(CameraUpdateFactory.newCameraPosition(boston),1000,null);
                 }
             }
         });
@@ -47,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View view) {
                 if(mapReady){
-                    m_map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                    m_map.animateCamera(CameraUpdateFactory.newCameraPosition(paris),1000,null);
                 }
             }
         });
@@ -64,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapReady=true;
         m_map=map;
         LatLng chennai=new LatLng(13.0827,80.2707);
-        CameraPosition target=CameraPosition.builder().target(chennai).zoom(20).build();
+        CameraPosition target=CameraPosition.builder().target(chennai).zoom(15).build();
         m_map.moveCamera(CameraUpdateFactory.newCameraPosition(target));
 
     }
