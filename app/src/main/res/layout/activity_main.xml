@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bugscript.firstmapapp.MainActivity">
+    tools:context="com.bugscript.firstmapapp.MainActivity"
+    android:orientation="vertical">
 
-    <fragment
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/map"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.google.android.gms.maps.MapFragment"
-        map:cameraTargetLat="13.0827"
-        map:cameraTargetLng="80.2707"
-        map:cameraBearing="112.5"
-        map:cameraTilt="65"
-        map:cameraZoom="20"/>
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center">
 
+            <Button
+                android:id="@+id/standard_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Standard"
+                android:layout_weight="1"/>
 
-</RelativeLayout>
+            <Button
+                android:id="@+id/satellite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="satellite"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/hybrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hybrid"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.MapFragment"
+            map:cameraTargetLat="13.0827"
+            map:cameraTargetLng="80.2707"
+            map:cameraBearing="112.5"
+            map:cameraTilt="65"
+            map:cameraZoom="20"/>
+
+    </LinearLayout>
+</LinearLayout>
