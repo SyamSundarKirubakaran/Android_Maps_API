@@ -26,14 +26,14 @@
                 android:id="@+id/standard_map"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Standard"
+                android:text="Delhi"
                 android:layout_weight="1"/>
 
             <Button
                 android:id="@+id/satellite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="satellite"
+                android:text="Boston"
                 android:layout_weight="1"
                 />
 
@@ -41,7 +41,7 @@
                 android:id="@+id/hybrid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hybrid"
+                android:text="Paris"
                 android:layout_weight="1"/>
         </LinearLayout>
 
