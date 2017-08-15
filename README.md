@@ -1,6 +1,6 @@
 # Android_Maps_API
 
-![Android](https://img.shields.io/badge/Platform-Android-green.svg)   ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)    ![Dependancies](https://img.shields.io/bithound/dependencies/github/rexxars/sse-channel.svg   ![API](https://img.shields.io/badge/API-Google%20MAPS-brightgreen.svg)
+![Android](https://img.shields.io/badge/Platform-Android-green.svg)   ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)    ![Dependancies](https://img.shields.io/bithound/dependencies/github/rexxars/sse-channel.svg)   ![API](https://img.shields.io/badge/API-Google%20MAPS-brightgreen.svg)
 
 A simple and a sleek app to show the basic functions of Google maps in Android using Maps API
 
